@@ -1,0 +1,991 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f7f7;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+.checkbox-and-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap; 
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    flex-shrink: 0; 
+    white-space: nowrap; 
+}
+
+.orange-btn {
+    background: #28a745;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* Ana menü */
+.main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    list-style: none;
+    gap: 20px;
+    position: relative;
+}
+
+.hamburger {
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    display: block; 
+}
+
+/* Dropdown menü */
+.hamburger .dropdown {
+    display: none;
+    position: absolute;
+    top: 40px; 
+    right: 0;  
+    background-color: #fff;
+    list-style: none;
+    border-radius: 10px;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    min-width: 180px; 
+    z-index: 999; 
+}
+
+.hamburger:hover .dropdown {
+    display: block;
+}
+
+.hamburger .dropdown li {
+    padding: 10px 20px;
+}
+
+.hamburger .dropdown li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+/* Genel Bilgi 4 yan yana */
+.general-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Ürünler eşit yükseklik ve butonlar */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    flex: 1 1 calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+}
+
+.add-cart {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(64, 101, 224);
+    color: white;
+    transition: 0.3s;
+}
+
+.add-cart:hover {
+    background-color: darkturquoise;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- HEADER ---------- */
+header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header .logo img {
+    height: 60px;
+    border-radius: 10px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+header nav ul li:hover {
+    background-color: #087ae4da;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- HERO ---------- */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 50px;
+    background: white;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 5px 0 0;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.green-btn {
+    background-color: #087ae4da;
+    color: #fff;
+    border: none;
+}
+
+.green-btn:hover {
+    background-color: #095283;
+}
+
+.record-btn {
+    background-color: rgb(63, 187, 14);
+    color: #fff;
+    border: none;
+}
+
+.record-btn :hover {
+    background-color: #095283;
+}
+
+.hero-img img {
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- BÖLÜMLER ---------- */
+section {
+    padding: 60px 50px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #2b68a0;
+}
+/*----------------------------------------------------------------------------------------------*/
+/* VİZYON-MİSYON */
+.mission-vision .container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin: 40px 0;
+}
+
+
+.mission-vision .card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 400px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.mission-vision .card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+
+@media (min-width: 850px) {
+    .vision-card {
+        order: 1; 
+    }
+    .mission-card {
+        order: 2;
+    }
+}
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- HAKKINDA ---------- */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: nowrap; 
+}
+
+.about-img {
+    width: 400px;
+    border-radius: 15px;
+}
+
+.about-text {
+    max-width: 1000px; 
+}
+
+.about-text p {
+    margin-bottom: 10px;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- BLOG ---------- */
+.blog-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blog-card {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+     transition: 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.blog-card img,
+.blog-card video {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- GENEL BİLGİ ---------- */
+.general-section .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+
+.general {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s ease; 
+}
+
+.general:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.general ul {
+    list-style-type: disc; 
+    padding-left: 20px;    
+    margin: 0;            
+}
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- EĞİTMENLER ---------- */
+.instructor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.instructor-card {
+    text-align: center;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 15px;
+    width: 220px;
+    transition: 0.3s;
+}
+
+.instructor-card img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+/* ------ Arama Motoru --------- */
+.search-container {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.search-box {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 30px;
+    font-size: 18px;
+    outline: none;
+}
+
+.results {
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.result-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item a {
+    color: #007bff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.result-item p {
+    margin: 5px 0;
+    color: #333;
+}
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- ÜRÜNLER ---------- */
+.product-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 220px;
+}
+
+.product img {
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+/* Hover efekti için geçiş ekle */
+.product {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 220px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Hover durumunda büyüme ve gölge efekti */
+.product:hover {
+    transform: translateY(-10px) scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+}
+
+
+.product img {
+    max-width: 50%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover img {
+    transform: rotate(-3deg); 
+}
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- YORUMLAR ---------- */
+/* Yorumlar Bölümü */
+#yorum {
+  padding: 90px 40px;
+  text-align: center;
+  background: white; 
+}
+
+#yorum h2 {
+  font-size: 34px;
+  margin-bottom: 40px;
+  color:  #003b73;
+}
+
+/* Kartların yan yana duracağı alan */
+.review-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Kart tasarımı */
+.review-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  width: 260px;
+  min-height: 200px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+  border: 1px solid #e7dcd2;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* Hover efekti */
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+/* Fotoğraf */
+.review-card img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #f4ede8;
+}
+
+/* İsim */
+.review-card h4 {
+  color: #050897;
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+/* Yıldızlar */
+.review-card span {
+  color: #d4a574;
+  font-size: 16px;
+}
+
+/* Yorum metni */
+.review-card p {
+  font-size: 15px;
+  margin-top: 8px;
+  color: #000000;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- KAYIT & ÖDEME ---------- */
+.payment-card {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- SSS ---------- */
+.faq-card {
+    background: #f1f1f1;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    padding-top: 10px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- FORM & İLETİŞİM ---------- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+    max-width: 500px;
+    margin: auto;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+/* Checkbox ve buton aynı satırda */
+.checkbox-and-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    flex: 1; 
+}
+
+.orange-btn {
+    background: #28a745;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    white-space: nowrap; 
+}
+
+.orange-btn:hover {
+    background: #218838;
+}
+
+
+/*------------------------------------------------------------------------------------------------*/
+/* -------------------SONRAKİ DÖNEM -----------------*/
+.cards-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lesson-card, .study-card {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 15px;
+    width: 220px;
+    text-align: center;
+}
+
+.blue-btn {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.red-btn {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- SEPET PANEL ---------- */
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 20px;
+    z-index: 10000;
+    overflow-y: auto;
+}
+
+.cart-panel.active {
+    right: 0;
+}
+
+.close-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background: #00CED1;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- FOOTER ---------- */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- YUKARI ÇIKMA BUTTON ---------- */
+#topBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 40px; 
+  right: 40px; 
+  z-index: 1000; 
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+#topBtn:hover {
+  background-color: #333;
+}
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* ---------- BURS ---------------- */
+.body-burs {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f1f3f7;
+    color: #333;
+}
+
+header {
+    background: white;
+    padding: 2.5rem;
+    text-align: center;
+    color: #0a5397da;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+.form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #3395c2;
+    border-bottom: 2px solid #27ae60;
+    padding-bottom: .3rem;
+    margin-top: 2rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem 1.3rem;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: .7rem;
+    margin-top: .3rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #27ae60;
+    outline: none;
+    box-shadow: 0 0 5px rgba(39, 174, 96, 0.3);
+}
+
+.submit-btn {
+    margin-top: 2rem;
+    background: #27ae60;
+    color: white;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit-btn:hover {
+    background: #239252;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    display: none;
+    margin-top: 1rem;
+}
+
+footer {
+    margin-top: 3rem;
+    background: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* --- DÖNEM --- */
+/* ===== GENEL ===== */
+.body-container {
+    font-family: "Poppins", sans-serif;
+    background: #eef1f6;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 30px 10px;
+    background: #007bff;
+    color: white;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.logo {
+    margin: 0;
+    font-size: 34px;
+}
+
+.subtitle {
+    margin-top: 5px;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ===== DERS KARTI ===== */
+.information-card {
+    background: white;
+    width: 88%;
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.information-card:hover {
+    transform: translateY(-4px);
+}
+
+.information-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.information-title {
+    font-size: 22px;
+    margin: 0;
+}
+
+.finished-tag {
+    padding: 6px 14px;
+    background: #d6336c;
+    color: white;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.information-video {
+    width: 100%;
+    border-radius: 14px;
+    margin: 20px 0;
+}
+
+/* ===== YORUMLAR ===== */
+.comments-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.comment-box {
+    background: #f3f3f3;
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd1e0;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.comment-input:focus {
+    border-color: #5c7cfa;
+}
+
+.comment-btn {
+    background: #4c6ef5;
+    border: none;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.comment-btn:hover {
+    background: #3b5bdb;
+}

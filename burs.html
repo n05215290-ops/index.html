@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern E-Ticaret – Burs Başvurusu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="burs">
+
+<header>
+    <h1><b>𝑴𝒐𝒅𝒆𝒓𝒏 𝑬-𝑻𝒊𝒄𝒂𝒓𝒆𝒕 𝑩𝒖𝒓𝒔 𝑷𝒓𝒐𝒈𝒓𝒂𝒎ı</b></h1>
+    <p><b>Geleceğin dijital ticaret uzmanları için özel burs başvurusu</b></p>
+</header>
+
+<main>
+    <form id="bursForm" class="form-container">
+
+        <!-- BÖLÜM 1 -->
+        <h2>1. Kişisel Bilgiler</h2>
+        <div class="form-grid">
+            <div>
+                <label>Ad:</label>
+                <input type="text" id="ad" required>
+            </div>
+
+            <div>
+                <label>Soyad:</label>
+                <input type="text" id="soyad" required>
+            </div>
+
+            <div>
+                <label>Doğum Tarihi:</label>
+                <input type="date" id="dogum" required>
+            </div>
+
+            <div>
+                <label>TC Kimlik No:</label>
+                <input type="number" id="tc" required>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 2 -->
+        <h2>2. İletişim Bilgileri</h2>
+        <div class="form-grid">
+            <div>
+                <label>E-posta:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div>
+                <label>Telefon:</label>
+                <input type="tel" id="telefon" required>
+            </div>
+            <div>
+                <label>Şehir:</label>
+                <input type="text" id="sehir" required>
+            </div>
+            <div>
+                <label>Adres:</label>
+                <textarea id="adres" rows="3" required></textarea>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 3 -->
+        <h2>3. Eğitim Bilgileri</h2>
+        <div class="form-grid">
+            <div>
+                <label>Öğrenim Durumu:</label>
+                <select id="ogrenim" required>
+                    <option value="">Seçiniz</option>
+                    <option>Ortaöğretim</option>
+                    <option>Lise</option>
+                    <option>Ön Lisans</option>
+                    <option>Lisans</option>
+                    <option>Yüksek Lisans</option>
+                    <option>Doktora</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Okul Adı:</label>
+                <input type="text" id="okul" required>
+            </div>
+
+            <div>
+                <label>Bölüm:</label>
+                <input type="text" id="bolum" required>
+            </div>
+
+            <div>
+                <label>Not Ortalaması (GPA):</label>
+                <input type="text" id="gpa" required>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 4 -->
+        <h2>4. Gelir ve Sosyal Durum</h2>
+        <div class="form-grid">
+            <div>
+                <label>Aile Aylık Geliri (₺):</label>
+                <input type="number" id="gelir" required>
+            </div>
+
+            <div>
+                <label>Ailedeki Kişi Sayısı:</label>
+                <input type="number" id="kisisayisi" required>
+            </div>
+
+            <div>
+                <label>Burs Alma Durumu:</label>
+                <select id="bursdurum">
+                    <option>Hayır</option>
+                    <option>Evet</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 5 -->
+        <h2>5. E-Ticaret Bilgileri ve Hedefler</h2>
+        <label>E-Ticaret ile ilgili deneyiminiz var mı?</label>
+        <select id="deneyim" required>
+            <option value="">Seçiniz</option>
+            <option>Evet, profesyonel</option>
+            <option>Evet, amatör</option>
+            <option>Hayır, yeni başlıyorum</option>
+        </select>
+
+        <label>Neden e-ticaret öğrenmek istiyorsunuz?</label>
+        <textarea id="neden" rows="4" required></textarea>
+
+        <label>5 yıl içinde e-ticaret hedefleriniz nedir?</label>
+        <textarea id="hedef" rows="4" required></textarea>
+
+        <label>Başvurmak istediğiniz kurs:</label>
+        <select id="kurs" required>
+            <option value="">Seçiniz</option>
+            <option>Temel E-Ticaret Eğitimi</option>
+            <option>Amazon / Etsy Mağaza Yönetimi</option>
+            <option>Dijital Pazarlama – Performans Reklamcılığı</option>
+            <option>E-Ticaret Strateji ve Marka Geliştirme</option>
+        </select>
+
+        <!-- BÖLÜM 6 -->
+        <h2>6. Referans Bilgileri</h2>
+        <div class="form-grid">
+            <div>
+                <label>Referans Adı:</label>
+                <input type="text" id="refad">
+            </div>
+            <div>
+                <label>Referans Telefon:</label>
+                <input type="tel" id="reftel">
+            </div>
+            <div>
+                <label>Referans Kurum:</label>
+                <input type="text" id="refkurum">
+            </div>
+        </div>
+
+        <!-- BÖLÜM 7 -->
+        <h2>7. Evrak Yükleme</h2>
+        <label>Kimlik Fotokopisi:</label>
+        <input type="file" id="kimlik" accept="image/*,application/pdf">
+
+        <label>Öğrenci Belgesi:</label>
+        <input type="file" id="ogrenciBelgesi" accept="image/*,application/pdf">
+
+        <label>Transkript / Not Dökümü:</label>
+        <input type="file" id="transkript" accept="image/*,application/pdf">
+
+        <!-- GÖNDER -->
+        <button type="submit" class="submit-btn">Başvuruyu Gönder</button>
+
+        <p id="successMessage" class="success-message"></p>
+    </form>
+</main>
+
+<a href="http://127.0.0.1:5500/index.html#burs.html" class="btn green-btn">Ana Sayfa</a>
+<footer>
+    <p>© 2025 Modern E-Ticaret Burs Programı | Tüm Hakları Saklıdır</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

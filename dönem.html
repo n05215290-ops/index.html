@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dönem – Eğitim Platformu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body-container">
+
+<header class="header">
+    <h1 class="logo">Dönem</h1>
+    <p class="subtitle">Bitmiş Canlı Ders Kayıtları</p>
+</header>
+
+<main>
+
+    <!-- =============== DERS 1 =============== -->
+    <div class="information-card">
+        <div class="information-info">
+            <h2 class="information-title">1) E-Ticaret’e Giriş – Temel Yapılar</h2>
+            <span class="finished-tag">Bitmiş Ders</span>
+        </div>
+
+        <video class="information-video" controls>
+            <source src="sample-video.mp4" type="video/mp4">
+        </video>
+
+        <h3 class="comments-title">Yorumlar</h3>
+        <div id="commentList1">
+
+             <!-- YORUMLAR -->
+            <div class="comment-box"><b>Ber**</b>Bu ders gerçekten e-ticaret temellerini kavramamı sağladı. Harika anlatım!</div>
+            <div class="comment-box"><b>As**</b>Altyapı seçimi konusundaki öneriler çok işime yaradı, teşekkürler hocam.</div>
+            <div class="comment-box"><b>Ca****</b>Canlı yayını kaçırmıştım ama kayıt mükemmel olmuş.</div>
+
+        </div>
+
+        <textarea id="commentInput1" class="comment-input" placeholder="Yorum yaz..."></textarea>
+        <button class="comment-btn" onclick="addComment(1)">Yorum Ekle</button>
+    </div>
+
+
+    <!-- =============== DERS 2 =============== -->
+    <div class="information-card">
+        <div class="information-info">
+            <h2 class="information-title">2) Ürün & Stok Yönetimi</h2>
+            <span class="finished-tag">Bitmiş Ders</span>
+        </div>
+
+        <video class="information-video" controls>
+            <source src="sample-video.mp4" type="video/mp4">
+        </video>
+
+        <h3 class="comments-title">Yorumlar</h3>
+        <div id="commentList2">
+            
+            <!-- YORUMLAR -->
+            <div class="comment-box"><b>Me****</b>Stok yönetimi hiç bu kadar kolay gelmemişti. Çok iyi anlatılmış.</div>
+            <div class="comment-box"><b>Na***</b>Ürün varyasyonları örnekleri işimde direkt kullandım.</div>
+            <div class="comment-box"><b>Fe****</b>Gerçekten profesyonel bir eğitim, teşekkür ederim.</div>
+
+        </div>
+
+        <textarea id="commentInput2" class="comment-input" placeholder="Yorum yaz..."></textarea>
+        <button class="comment-btn" onclick="addComment(2)">Yorum Ekle</button>
+    </div>
+
+
+    <!-- =============== DERS 3 =============== -->
+    <div class="information-card">
+        <div class="information-info">
+            <h2 class="information-title">3) Reklam & Satış Artırma Teknikleri</h2>
+            <span class="finished-tag">Bitmiş Ders</span>
+        </div>
+
+        <video class="information-video" controls>
+            <source src="sample-video.mp4" type="video/mp4">
+        </video>
+
+        <h3 class="comments-title">Yorumlar</h3>
+        <div id="commentList3">
+
+             <!-- YORUMLAR -->
+            <div class="comment-box"><b>Ir***</b>&nbsp;Reklam kampanyası analizleri gerçekten mükemmeldi.</div>
+            <div class="comment-box"><b>Me****</b>Satış artırma taktiklerini birebir uyguladım ve sonuç aldım!</div>
+            <div class="comment-box"><b>Ey***</b>Kesinlikle herkesin izlemesi gereken bir ders.</div>
+
+        </div>
+
+        <textarea id="commentInput3" class="comment-input" placeholder="Yorum yaz..."></textarea>
+        <button class="comment-btn" onclick="addComment(3)">Yorum Ekle</button>
+    </div>
+
+</main>
+<a href="http://127.0.0.1:5500/index.html#dönem.html" class="btn green-btn">Ana Sayfa</a>
+<footer> 
+    <p>© 2025 Modern E-Ticaret Dönem Programı | Tüm Hakları Saklıdır</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
